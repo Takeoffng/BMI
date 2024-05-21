@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="./index.js" defer></script>
+   
+  </head>
+  <body class="h-dvh flex justify-center items-center">
+    <form onsubmit="bmi_calc(event)"
+     id="form" class="flex bg-white flex-col items-center h-fit gap-4 p-5">
+      <h1 class="uppercase text-2xl font-semibold">BMI CALCULATOR</h1>
+      <div class="flex *:flex *:flex-col">
+        <div>
+          <label  class="font-semibold" for="height">Height</label>
+          <input id="height" class="rounded-md border border-slate-400 w-[10rem] p-1" type="number" placeholder="centimeters" />
+        </div>
+        <div>
+          <label class="font-semibold"
+           for="weight" >Weight</label>
+          <input id="weight" class="border rounded-md w-[10rem] p-1"
+          type="number" placeholder="kilograms" />
+        </div>
+      </div>
+      <button type="submit" id="calculate" class="text-white flex self-start bg-black px-4 py-2 uppercase text-sm rounded-md">Calculate</button>
+      <div  id="bmi" class="bg-black text-white w-full px-2 py-1 font-mono rounded-md text-center">
+        Your BMI is...
+      </div>
+    </form>
+  </body>
+</html>
